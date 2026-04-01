@@ -9,6 +9,7 @@
     </head>
     <body>
         <h1 class="pageHeader">Subway Counter</h1>
+        <h1>Bread Count</h1>
         <h2>Freezer</h2>
         <label>
             Bread Boxes
@@ -63,8 +64,13 @@
         </label>
         <br>
         <label>
+            Flatbread Bags
+            <input type="number" class="subInput" name="" id="frontFlatBag">
+        </label>
+        <br>
+        <label>
             Flatbread
-            <input type="number" class="subInput" name="" id="frontFlat">
+            <input type="number" class="subInput" name="" step="0.5" id="frontFlat">
         </label>
         <br>
         <label>
@@ -73,11 +79,105 @@
         </label>
         <br>
         <label>
-            Wraps
-            <input type="number" class="subInput" name="" id="frontWraps">
+            Wrap Bags
+            <input type="number" class="subInput" name="" id="frontWrapBag">
+        </label>
+        <br>
+        <label>
+            Pocket Bags
+            <input type="number" class="subInput" name="" id="frontPocketBag">
+        </label>
+        <br>
+        <label>
+            Open Wraps & Pockets
+            <input type="number" class="subInput" name="" id="frontWrap">
         </label>
         <br>
         <br>
-        <button type="button" onclick="calcTotals();">Submit</button>
+        <button type="button" onclick="calcCountTotals();">Submit</button>
+        <br>
+        <br>
+        <br>
+        <p id="countTextArea" class="textArea"></p>
+        <h1>Drawer Count</h1>
+        <h2>Change</h2>
+        <label>
+            Quarters #1
+            <input type="number" class="subInput" name="" id="quarters1">
+        </label>
+        <br>
+        <label>
+            Dimes #1
+            <input type="number" class="subInput" name="" id="dimes1">
+        </label>
+        <br>
+        <label>
+            Pennies #1
+            <input type="number" class="subInput" name="" id="pennies1">
+        </label>
+        <br>
+        <label>
+            Pennies #2
+            <input type="number" class="subInput" name="" id="pennies2">
+        </label>
+        <br>
+        <label>
+            Pennies #3
+            <input type="number" class="subInput" name="" id="pennies3">
+        </label>
+        <br>
+        <label>
+            Nickels
+            <input type="number" class="subInput" name="" id="nickels">
+        </label>
+        <br>
+        <label>
+            Dimes #2
+            <input type="number" class="subInput" name="" id="dimes2">
+        </label>
+        <br>
+        <label>
+            Quarters #2
+            <input type="number" class="subInput" name="" id="quarters2">
+        </label>
+        <br>
+        <h2>Cash</h2>
+        <label>
+            $20
+            <input type="number" class="subInput" name="" id="twenties">
+        </label>
+        <br>
+        <label>
+            $10
+            <input type="number" class="subInput" name="" id="tens">
+        </label>
+        <br>
+        <label>
+            $5
+            <input type="number" class="subInput" name="" id="fives">
+        </label>
+        <br>
+        <label>
+            $1
+            <input type="number" class="subInput" name="" id="ones">
+        </label>
+        <br>
+        <h2>Variables</h2>
+        <label>
+            Cash to Keep
+            <input type="number" class="subInput" name="" id="cashKeep">
+        </label>
+        <br>
+        <label>
+            Change Fund
+            <input type="number" class="subInput" name="" id="changeFund">
+        </label>
+        <br>
+        <br>
+        <button type="button" onclick="calcCashTotals();">Submit</button>
+        <br>
+        <br>
+        <br>
+        <p id="cashTextArea" class="textArea"></p>
     </body>
 </html>

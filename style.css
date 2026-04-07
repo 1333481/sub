@@ -86,6 +86,7 @@ md-outlined-text-field {
     --md-outlined-text-field-focus-input-text-color: aliceblue;
     --md-outlined-text-field-focus-label-text-color: aliceblue;
     --md-outlined-text-field-input-text-color: aliceblue;
+    --md-outlined-text-field-hover-input-text-color: aliceblue;
     --md-outlined-text-field-focus-outline-color: aliceblue;
     --md-outlined-text-field-input-text-size: 1.5rem;
     --md-outlined-text-field-label-text-size: 1.5rem;

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Subway Counter</title>
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
+        <script type="module">
+            import "https://esm.run/@material/web/all.js"
+        </script>
     </head>
     <body>
         <header class="pageTitle">
-            <h1 id="title">Subway Counter</h1>
+            <h1>Subway Counter</h1>
         </header>
         <nav id="nav">
             <ul>
@@ -20,138 +23,48 @@
         <div class="section">
             <h2 class="sectionHeader" id="breadCount">Bread Count</h2>
             <h3>Freezer</h3>
-        <label>
-            Bread Boxes
-            <input type="number" class="subInput" name="" id="freezerBreadBox">
-        </label>
-        <label>
-            Open Bread
-            <input type="number" class="subInput" name="" id="freezerBreadOpen">
-        </label>
-        <label>
-            Flatbread Boxes
-            <input type="number" class="subInput" name="" id="freezerFlatBox">
-        </label>
-        <label>
-            Flatbread Bags
-            <input type="number" class="subInput" name="" id="freezerFlatBag">
-        </label>
-        <label>
-            Wrap Boxes
-            <input type="number" class="subInput" name="" id="freezerWrapBox">
-        </label>
-        <label>
-            Wrap Bags
-            <input type="number" class="subInput" name="" id="freezerWrapBag">
-        </label>
-        <label>
-            Pocket Boxes
-            <input type="number" class="subInput" name="" id="freezerPocketBox">
-        </label>
-        <label>
-            Pocket Bags
-            <input type="number" class="subInput" name="" id="freezerPocketBag">
-        </label>
-        <h3>Back Room</h3>
-        <label>
-            Salad Bowls
-            <input type="number" class="subInput" name="" id="backSalad">
-        </label>
-        <h3>Front</h3>
-        <label>
-            Bread
-            <input type="number" class="subInput" name="" id="frontBread">
-        </label>
-        <label>
-            Flatbread Bags
-            <input type="number" class="subInput" name="" id="frontFlatBag">
-        </label>
-        <label>
-            Flatbread
-            <input type="number" class="subInput" name="" step="0.5" id="frontFlat">
-        </label>
-        <label>
-            Salad Bowls
-            <input type="number" class="subInput" name="" id="frontSalad">
-        </label>
-        <label>
-            Wrap Bags
-            <input type="number" class="subInput" name="" id="frontWrapBag">
-        </label>
-        <label>
-            Pocket Bags
-            <input type="number" class="subInput" name="" id="frontPocketBag">
-        </label>
-        <label>
-            Open Wraps & Pockets
-            <input type="number" class="subInput" name="" id="frontWrap">
-        </label>
-        <button type="button" onclick="calcCountTotals();">Submit</button>
-        <p id="countTextArea" class="textArea"></p>
+            <md-outlined-text-field id="freezerBreadBox" label="Bread Boxes" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerBreadOpen" label="Open Bread" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerFlatBox" label="Flatbread Boxes" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerFlatBag" label="Flatbread Bags" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerWrapBox" label="Wrap Boxes" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerWrapBag" label="Wrap Bags" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerPocketBox" label="Pocket Boxes" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="freezerPocketBag" label="Pocket Bags" type="number"></md-outlined-text-field>
+            <h3>Back Room</h3>
+            <md-outlined-text-field id="backSalad" label="Salad Bowls" type="number"></md-outlined-text-field>
+            <h3>Front</h3>
+            <md-outlined-text-field id="frontBread" label="Bread" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="frontFlatBag" label="Flatbread Bags" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="frontFlat" label="Flatbread" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="frontSalad" label="Salad Bowls" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="frontWrapBag" label="Wrap Bags" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="frontPocketBag" label="Pocket Bags" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="frontWrap" label="Open Wraps & Pockets" type="number"></md-outlined-text-field>
+            <md-filled-button onclick="calcCountTotals();">Submit</md-filled-button>
+            <p id="countTextArea" class="textArea"></p>
         </div>
         <div class="section">
             <h2 class="sectionHeader" id="drawerCount">Drawer Count</h2>
             <h3>Change</h3>
-        <label>
-            Quarters #1
-            <input type="number" class="subInput" name="" id="quarters1">
-        </label>
-        <label>
-            Dimes #1
-            <input type="number" class="subInput" name="" id="dimes1">
-        </label>
-        <label>
-            Pennies #1
-            <input type="number" class="subInput" name="" id="pennies1">
-        </label>
-        <label>
-            Pennies #2
-            <input type="number" class="subInput" name="" id="pennies2">
-        </label>
-        <label>
-            Pennies #3
-            <input type="number" class="subInput" name="" id="pennies3">
-        </label>
-        <label>
-            Nickels
-            <input type="number" class="subInput" name="" id="nickels">
-        </label>
-        <label>
-            Dimes #2
-            <input type="number" class="subInput" name="" id="dimes2">
-        </label>
-        <label>
-            Quarters #2
-            <input type="number" class="subInput" name="" id="quarters2">
-        </label>
-        <h3>Cash</h3>
-        <label>
-            $20
-            <input type="number" class="subInput" name="" id="twenties">
-        </label>
-        <label>
-            $10
-            <input type="number" class="subInput" name="" id="tens">
-        </label>
-        <label>
-            $5
-            <input type="number" class="subInput" name="" id="fives">
-        </label>
-        <label>
-            $1
-            <input type="number" class="subInput" name="" id="ones">
-        </label>
-        <h3>Variables</h3>
-        <label>
-            Cash to Keep
-            <input type="number" class="subInput" name="" id="cashKeep">
-        </label>
-        <label>
-            Change Fund
-            <input type="number" class="subInput" name="" id="changeFund">
-        </label>
-        <button type="button" onclick="calcCashTotals();">Submit</button>
-        <p id="cashTextArea" class="textArea"></p>
+            <md-outlined-text-field id="quarters1" label="Quarters #1" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="dimes1" label="Dimes #1" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="pennies1" label="Pennies #1" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="pennies2" label="Pennies #2" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="pennies3" label="Pennies #3" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="nickels" label="Nickels" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="dimes2" label="Dimes #2" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="quarters2" label="Quarters #2" type="number"></md-outlined-text-field>
+            <h3>Cash</h3>
+            <md-outlined-text-field id="twenties" label="Twenties" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="tens" label="Tens" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="fives" label="Fives" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="ones" label="Ones" type="number"></md-outlined-text-field>
+            <h3>Variables</h3>
+            <md-outlined-text-field id="cashKeep" label="Cash to Keep" type="number"></md-outlined-text-field>
+            <md-outlined-text-field id="changeFund" label="Change Fund" type="number"></md-outlined-text-field>
+            <md-filled-button onclick="calcCashTotals();">Submit</md-filled-button>
+            <p id="cashTextArea" class="textArea"></p>
         </div>
     </body>
 </html>

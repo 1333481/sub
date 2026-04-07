@@ -31,7 +31,6 @@ a:visited {
 }
 a:hover {
     color:red;
-    transition: color .5s ease;
 }
 .section {
     display: flex;
@@ -81,18 +80,23 @@ ul, ol {
     background-color: #222;
     border-radius: 1.5rem;
 }
+md-outlined-text-field {
+    --md-outlined-text-field-label-text-color: aliceblue;
+    --md-outlined-text-field-hover-label-text-color: aliceblue;
+    --md-outlined-text-field-focus-input-text-color: aliceblue;
+    --md-outlined-text-field-focus-label-text-color: aliceblue;
+    --md-outlined-text-field-input-text-color: aliceblue;
+    --md-outlined-text-field-focus-outline-color: aliceblue;
+    --md-outlined-text-field-input-text-size: 1.5rem;
+    --md-outlined-text-field-label-text-size: 1.5rem;
+    --md-outlined-text-field-label-text-size: 1.5rem;
+    --md-outlined-text-field-label-text-populated-size: 1.5rem;
+    --md-outlined-text-field-label-text-populated-line-height: 1.5rem;
+}
+md-filled-button {
+    --md-filled-button-label-text-size: 1.5rem;
+    --md-filled-button-container-color: green;
+}
 .textArea {
     color: green;
-}
-label {
-    display: block;
-    margin-bottom: .25vh;
-
-}
-button {
-    margin-top: 1vh;
-}
-.subInput {
-    background-color: #333;
-    color: aliceblue;
 }

@@ -1,4 +1,6 @@
-function calcCountTotals() {
+const breadButton = document.getElementById("breadButton");
+const drawerButton = document.getElementById("drawerButton");
+breadButton.addEventListener("click", function calcCountTotals() {
     const freezerBreadBox = Number(document.getElementById("freezerBreadBox").value);
     const freezerBreadOpen = Number(document.getElementById("freezerBreadOpen").value);
     const freezerFlatBox = Number(document.getElementById("freezerFlatBox").value);
@@ -23,8 +25,8 @@ function calcCountTotals() {
     // alert(`Bread: ${bread} \nFlatbread: ${flat} \nSalad Bowls: ${salad} \nWraps: ${wraps}`);
     textArea.textContent = `Bread: ${bread.toFixed(2)} Flatbread: ${flat.toFixed(2)} Salad Bowls: ${salad.toFixed(2)} Wraps: ${wraps.toFixed(2)}`
     textArea.scrollIntoView();
-}
-function calcCashTotals() {
+});
+drawerButton.addEventListener("click", function calcCashTotals() {
     const quarters1 = Number(document.getElementById("quarters1").value);
     const dimes1 = Number(document.getElementById("dimes1").value);
     const pennies1 = Number(document.getElementById("pennies1").value);
@@ -55,4 +57,4 @@ function calcCashTotals() {
         textArea.textContent = ` Cash Drop: ${cashDrop.toFixed(2)} Loose Currency: ${looseCurrency.toFixed(2)} Coin Dispenser: ${coinDispenser.toFixed(2)} Change Fund: ${changeFund.toFixed(2)}`;
     }
     textArea.scrollIntoView();
-}
+});

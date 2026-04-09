@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Subway Counter</title>
         <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
+        <script src="main.js" defer></script>
         <script type="module">
             import "https://esm.run/@material/web/all.js"
         </script>
@@ -41,7 +41,7 @@
             <md-outlined-text-field id="frontWrapBag" label="Wrap Bags" type="number"></md-outlined-text-field>
             <md-outlined-text-field id="frontPocketBag" label="Pocket Bags" type="number"></md-outlined-text-field>
             <md-outlined-text-field id="frontWrap" label="Open Wraps & Pockets" type="number"></md-outlined-text-field>
-            <md-filled-button onclick="calcCountTotals();">Submit</md-filled-button>
+            <md-filled-button id="breadButton">Submit</md-filled-button>
             <p id="countTextArea" class="textArea"></p>
         </div>
         <div class="section">
@@ -63,7 +63,7 @@
             <h3>Variables</h3>
             <md-outlined-text-field id="cashKeep" label="Cash to Keep" type="number"></md-outlined-text-field>
             <md-outlined-text-field id="changeFund" label="Change Fund" type="number"></md-outlined-text-field>
-            <md-filled-button onclick="calcCashTotals();">Submit</md-filled-button>
+            <md-filled-button id="drawerButton">Submit</md-filled-button>
             <p id="cashTextArea" class="textArea"></p>
         </div>
     </body>
